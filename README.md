@@ -1,61 +1,68 @@
-# <img src="https://github.com/Aetopia/Lunar-Client-Lite-Launcher/blob/main/Logo.png" alt="image.png" width="30" height="30">  Lunar Client Lite Launcher
-<b>:warning: Project Status: Maintenance Mode (Bug Fixes Only.)</b>  
+# <img src="https://github.com/Aetopia/Lunar-Client-Lite-Launcher/blob/main/Logo.png" alt="image.png" width="30" height="30">  Lunar Client Lite 启动器
+<b>:注意: 这是原仓库的简体中文汉化版本，除了修改翻译之外，背景图片改为洛谷图床获取。</b>  
+<b>:注意: 项目状态: 维护模式 （仅修复 Bug。）</b>  
 
-Lunar Client Lite is a simple lightweight and unlocked launcher which features the following: 
-1. Quick Version Switching 
-2. Custom JVM Arguments Support 
-3. Multi Launch Directory Support
-4. A Simple-to-Use Interface  
+Lunar Client Lite 是一款简单的轻量级和 unlocked 启动器，具有以下特点：
+1. 快速版本切换
+2. 自定义 JVM 参数支持
+3. 多启动目录支持
+4. 一个简单易用的界面
 
-## Requirements
-Before you begin using LC Lite, make sure that you have Lunar Client installed and also ensure you have your favourite LC versions installed.  
-(If you don't have LC installed then LC Lite will download the latest Lunar Client installer.)  
+## 使用条件
+在开始使用 LC Lite 之前，请确保已安装 Lunar Client 端，并确保已安装你喜欢的的 LC 版本。
+（如果你没有安装LC，则 LC Lite 将下载最新的 Lunar Client 安装程序。）
 
-<b>LC Lite will only work if you have bought Minecraft.</b>
-## How to use & setup?
-<b>Make sure to unblock `LCL.exe` in your antivirus protection settings incase if it gets false flagged.</b>
-1. Download the latest release from here.  
-https://github.com/Aetopia/Lunar-Client-Lite-Launcher/releases  
+<b>LC Lite 只有在购买 Minecraft 后才可以使用</b>
+## 如何使用 & 启动？
+<b>如果 `LCL.exe` 被杀毒软件误报，请加其到杀毒软件白名单。</b>
+1. 在这里下载最新构建
+原版：https://github.com/Aetopia/Lunar-Client-Lite-Launcher/releases  
+简体中文汉化版：https://github.com/Dian-Jiao/Lunar-Client-Lite-Launcher/releases  
 
-2. Start `LCL.exe`.
+2. 启动 `LCL.exe`.
 
-3. Once LC Lite is started, it should look like this:  
+3. 当 LC Lite 启动时，应该长这样： 
 
 [![image.png](https://i.postimg.cc/L85jVd5R/image.png)](https://postimg.cc/v4R1QN5S)
 
-4. Configuring LCL's Options.  
-Click on the `Options` Tab.    
+~~图片懒得改了，下同~~
+
+4. 设置你的 LCL 设置。  
+点击 `选项` 页面。    
 
 [![image.png](https://i.postimg.cc/bvFCRHpV/image.png)](https://postimg.cc/VSnWftSX)     
 
-You can specify custom JVM Arguments within the `JVM Arguments` section.  
-By default the arguments are set to `-Xms3G -Xmx3G -XX:+DisableAttachMechanism`. 
+在 `JVM 额外参数` 处设置你的 JVM 额外参数。
+该参数默认设置为 `-Xms3G -Xmx3G -XX:+DisableAttachMechanism`.。
 
-Here, you can set up a Custom Launch Directory for LC 1.7-1.17 by clicking on `✎`.   
+在这个页面，你可以自定义通过点击 `✎` LC 1.7-1.17 的启动路径。   
 
-Unchecking the `Cosmetics` toggle can reduce LC's startup time and also fixes the `"Title Screen Freeze upon Launch"` or `"Not Responding upon Launch"` issue.    
-Unchecking this option will entirely disable cosmetics. This change is client sided only.  
+取消勾选 `Cosmetics` 复选框可以减少 LC's 启动时间并且修复 `"标题画面未响应"` 或者 `"启动时未响应"` 的问题。    
+取消勾选该选项会禁用 Lunar Client 的 cosmetics。此更改仅限于该程序启动的客户端。  
 
-Click on the `Save` button to save your settings.
+点击 `保存` 按钮保存你的设置，
 
-5. Click on the `About` Tab to view information on Lunar Client Lite and to access a few extra options. 
+5. 点击 `关于` 页面查看 Lunar Client Lite 相关信息和访问额外选项。 
  
 [![image.png](https://i.postimg.cc/T2r8TFRR/image.png)](https://postimg.cc/3WJfBL46)   
 
-In the `About` Tab, you can click on the given links to view my GitHub Profile, to view LC Lite's GitHub Repository and an invite link to join Couleur Tweak Tips Discord Server.  
+在 `About` 页面，可以单击给定的链接查看我的 GitHub 个人资料、查看 LC Lite 的 GitHub 存储库以及加入 Couleur Tweak Tips Discord Server 的邀请链接。
 
-If you click on the `Refresh` button, you can reset LC Lite's Settings and download a fresh set of assets of LC Lite's GitHub Repository.  
+如果单击 `重置`按钮，您可以重置 LC Lite 的设置并重新下载 LC Lite 的 ~~GitHub 存储库~~ 从洛谷图床放的资源文件。
 
-If you click on the `Open` button, you can open up LC Lite's Logs Folder.  
+如果您单击 `打开` 按钮，您可以打开 LC Lite 的日志文件夹。
 
-6. Select any version, you would like to use via the `Version` Dropdown List.
+6. 通过 `版本` 下拉框选择任何版本。
 
 
 [![image.png](https://i.postimg.cc/NFT2nYT2/image.png)](https://postimg.cc/64WQ7kMB)   
 
-7. Finally click on the launch button to launch Lunar Client!  
-<i>LC not launching via LC Lite? Make sure you have your desired versions installed via the official LC Launcher!</i>  
-<b>NOTE: To update Lunar Client and its dependencies, you must use the official LC launcher to update them.</b>
+7. 最后点击启动按钮启动游戏。  
+<i>无法通过 LC Lite 启动 LC？ 确保通过官方 LC 启动器下载了所需版本！</i>  
+<b>注意：要更新 Lunar Client 及其依赖项，必须使用官方 LC 启动器来更新。</b>
+
+# 下面的我不想翻译了 爆炸了 反正没什么用
+
 ### Which JVM Arguments are good for LC?  
 
 LC uses OpenJDK 16 so they aren't many "optimal" JVM arguments which you can find online.  
