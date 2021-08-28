@@ -32,13 +32,13 @@ IniRead, GUIArguments, Config.ini, LC, Arguments
 Gui, Main:Default
 Gui, -MaximizeBox -MinimizeBox
 Gui, Font, s10
-Gui, Add, Tab3, w490 h385 x6 Top +Background, Home|Options|About
+Gui, Add, Tab3, w490 h385 x6 Top +Background, 主页|设置|关于
 Gui, Font, s8
 Gui, Add, Picture, x8 y32, Resources/Banner.png
 IniRead, GUIArguments, Config.ini, LC, Arguments
 Gui, Tab, 1
 Gui, Font, s10
-Gui, Add, Button, x195 y340 w110 h40 gLaunch +default vLaunch, Launch
+Gui, Add, Button, x195 y340 w110 h40 gLaunch +default vLaunch, 启动
 Gui, Font, s8
 Gui, Add, DropDownList, x196 y315 w108 h40 vVersionList gVersionWrite c30 r5, 1.7|1.8|1.12|1.16|1.17
 VersionRead()
@@ -51,17 +51,17 @@ IniRead, 112_Path, Config.ini, Paths, 1.12_Dir
 IniRead, 116_Path, Config.ini, Paths, 1.16_Dir
 IniRead, 117_Path, Config.ini, Paths, 1.17_Dir
 IniRead, CosmeticTextures, Config.ini, LC, Cosmetics
-Gui, Add, Text,, 1.7 Directory
+Gui, Add, Text,, 1.7 路径
 Gui, Add, Edit, w230 h20 v17Dir, %17_Path%
-Gui, Add, Text,, 1.8 Directory
+Gui, Add, Text,, 1.8 路径
 Gui, Add, Edit, w230 h20 v18Dir, %18_Path%
-Gui, Add, Text,, 1.12 Directory
+Gui, Add, Text,, 1.12 路径
 Gui, Add, Edit, w230 h20 v112Dir, %112_Path%
-Gui, Add, Text,, 1.16 Directory
+Gui, Add, Text,, 1.16 路径
 Gui, Add, Edit, w230 h20 v116Dir, %116_Path%
-Gui, Add, Text,, 1.17 Directory
+Gui, Add, Text,, 1.17 路径
 Gui, Add, Edit, w230 h20 v117Dir, %117_Path%
-Gui, Add, Text,, Launch Options
+Gui, Add, Text,, 启动选项
 If (CosmeticTextures = 1){
 	Gui, Add, Checkbox, Checked vCosmeticDelayFix, Cosmetics
 }
@@ -74,20 +74,21 @@ Gui, Add, Button, x255 y151 w25 h24 g112FolderSelect, ✎
 Gui, Add, Button, x255 y198 w25 h24 g116FolderSelect, ✎
 Gui, Add, Button, x255 y245 w25 h24 g117FolderSelect, ✎
 Gui, Font, s10
-Gui, Add, Button, x381 y343 w100 h40 vSave gSave, Save
+Gui, Add, Button, x381 y343 w100 h40 vSave gSave, 保存
 Gui, Font, s8
-Gui, Add, Text, x290 y41, JVM Arguments
+Gui, Add, Text, x290 y41, JVM 额外参数
 Gui, Add, Edit, x290 y58 w190 h275 vArgs 0x7 0x4, %GUIArguments%
 
 Gui, Tab, 3 
-Gui, Add, Link,, Lunar Client Lite made by <a href="https://github.com/Aetopia">Aetopia</a>.
-Gui, Add, Link,, GitHub Repository: <a href="https://github.com/Aetopia/Lunar-Client-Lite-Launcher">https://github.com/Aetopia/Lunar-Client-Lite-Launcher</a>
+Gui, Add, Link,, Lunar Client Lite 由 <a href="https://github.com/Aetopia">Aetopia</a> 制作。
+Gui, Add, Link,, GitHub 仓库: <a href="https://github.com/Aetopia/Lunar-Client-Lite-Launcher">https://github.com/Aetopia/Lunar-Client-Lite-Launcher</a>
 Gui, Add, Link,, Couleur Tweaks Tips Discord: <a href="https://dsc.gg/ctt">https://dsc.gg/ctt</a>
+Gui, Add, Link,, 由 Dian_Jiao 翻译：: <a href="https://github.com/Dian-Jiao/Lunar-Client-Lite-Launcher">https://github.com/Dian-Jiao/Lunar-Client-Lite-Launcher</a>
 Gui, Add, Text, w463 0x10
-Gui, Add, Text,, Set Lunar Client Lite's settings to default and download a fresh set of resources.
-Gui, Add, Button, gReset, Refresh
-Gui, Add, Text,, Open Lunar Client Lite's Logs Folder.
-Gui, Add, Button, gLogs, Open
+Gui, Add, Text,, 恢复 Lunar Client Lite 到默认设置并且重新下载资源文件。
+Gui, Add, Button, gReset, 恢复
+Gui, Add, Text,, 打开 Lunar Client Lite 的日志文件夹。
+Gui, Add, Button, gLogs, 打开
 Gui, Show, w500 h400, Lunar Client Lite
 GuiControl, Focus, Launch
 GuiControl, Focus, +default
@@ -145,10 +146,10 @@ ConfigCreate()
 
 Resources(x){
 	If (x=1){
-		URLDownloadToFile, https://raw.githubusercontent.com/Aetopia/Lunar-Client-Lite-Launcher/main/Logo.png, Resources/Main.png
+		URLDownloadToFile, https://cdn.luogu.com.cn/upload/image_hosting/gthb75iv.png, Resources/Main.png
 	}
 	If (x=2){
-		URLDownloadToFile, https://raw.githubusercontent.com/Aetopia/Lunar-Client-Lite-Launcher/main/Banner.png, Resources/Banner.png
+		URLDownloadToFile, https://cdn.luogu.com.cn/upload/image_hosting/51y9stfm.png, Resources/Banner.png
 	}
 }
 
@@ -214,11 +215,11 @@ VersionRead(){
 }
 
 LCCheck(){
-	MsgBox, 16, Error: Lunar Client Not Installed, No Lunar Client installation is present on this device.`nClick on OK to install the latest version of Lunar Client.
+	MsgBox, 16, 错误：Lunar Client 未安装，当前设备没有安装 Lunar Client。`n点击确认安装最新版 Lunar Client。
 	Gui, Install:New
 	Gui, -MaximizeBox -MinimizeBox
 	Gui, Add, Progress, w200 h20 vProgress cGreen, 20
-	Gui, Add, Text,, Downloading Lunar Client...
+	Gui, Add, Text,, 正在下载 Lunar Client...
 	Gui, Show,, Lunar Client Lite
 	URLDownloadToFile, https://launcherupdates.lunarclientcdn.com/latest.yml, %A_Temp%\ver.txt
 	FileReadLine, LauncherYML, %A_Temp%\ver.txt, 1
@@ -235,7 +236,7 @@ LCCheck(){
 }
 LCNotExist(){
 	Gui,Destroy
-	MsgBox, 16, Download Error, Lunar Client couldn't be downloaded.`nCheck your internet connection and try again.
+	MsgBox, 16, Download Error, Lunar Client 下载失败。`n请检查网络连接并重试。.
 	ExitApp
 }
 
@@ -282,20 +283,20 @@ FileCheck(n){
 	EnvGet, vHomeDrive, HOMEDRIVE
 	EnvGet, vHomePath, HOMEPATH
 	UserProfile=% vHomeDrive vHomePath
-	MsgBox, 16, Error: Version Not Found, LC %n% wasn't found on this device!`nPlease install LC %n%! 
+	MsgBox, 16, 错误：未找到版本文件, 无法在该设备找到 LC %n% 版本！`n请在 LC 中安装 %n% 版本！ 
 	Run, %UserProfile%\AppData\Local\Programs\lunarclient\Lunar Client.exe
 	ExitApp
 }
 
 NotExist(x){
 	if (x=1){
-		MsgBox, 16, Download Failed, The dependency could not be downloaded.`nCheck your internet connection.
+		MsgBox, 16, 下载失败，依赖项无法下载。`n请检查网络连接。
 		ExitApp
 		
 	}
 	
 	if (x=2){
-		MsgBox, 16, Download Failed, Failed to update dependencies.`nCheck your internet connection.
+		MsgBox, 16, 下载失败，无法更新依赖项。`n请检查网络连接。
 	}
 }
 
@@ -304,7 +305,7 @@ Logs(){
 	IfExist, %A_WorkingDir%\logs
 	Run, %A_WorkingDir%\logs,, Max
 	IfNotExist, %A_WorkingDir%\logs
-		MsgBox, 16, Error, Lunar Client Lite couldn't find any Logs folder.
+		MsgBox, 16, Error, Lunar Client Lite 找不到日志文件夹。
 }
 
 Reset(){
@@ -329,7 +330,7 @@ PathConfig(){
 
 17FolderSelect(){
 	IniRead, 17_Path, Config.ini, Paths, 1.7_Dir
-	FileSelectFolder, 17PathSelected, *%17_Path%, 3, Select a Directory for Lunar Client 1.7
+	FileSelectFolder, 17PathSelected, *%17_Path%, 3, 选择 Lunar Client 1.7 的路径
 	if 17PathSelected =
 		return
 	else
@@ -338,7 +339,7 @@ PathConfig(){
 
 18FolderSelect(){
 	IniRead, 18_Path, Config.ini, Paths, 1.8_Dir
-	FileSelectFolder, 18PathSelected, *%18_Path%, 3, Select a Directory for Lunar Client 1.8
+	FileSelectFolder, 18PathSelected, *%18_Path%, 3, 选择 Lunar Client 1.8 的路径
 	if 18PathSelected =
 		return
 	else
@@ -348,7 +349,7 @@ PathConfig(){
 
 112FolderSelect(){
 	IniRead, 112_Path, Config.ini, Paths, 1.12_Dir
-	FileSelectFolder, 112PathSelected, *%112_Path%, 3, Select a Directory for Lunar Client 1.12
+	FileSelectFolder, 112PathSelected, *%112_Path%, 3, 选择 Lunar Client 1.12 的路径
 	if 112PathSelected =
 		return
 	else
@@ -358,7 +359,7 @@ PathConfig(){
 
 116FolderSelect(){
 	IniRead, 116_Path, Config.ini, Paths, 1.16_Dir
-	FileSelectFolder, 116PathSelected, *%116_Path%, 3, Select a Directory for Lunar Client 1.16
+	FileSelectFolder, 116PathSelected, *%116_Path%, 3, 选择 Lunar Client 1.16 的路径
 	if 116PathSelected =
 		return
 	else
@@ -368,7 +369,7 @@ PathConfig(){
 
 117FolderSelect(){
 	IniRead, 117_Path, Config.ini, Paths, 1.17_Dir
-	FileSelectFolder, 117PathSelected, *%117_Path%, 3, Select a Directory for Lunar Client 1.17
+	FileSelectFolder, 117PathSelected, *%117_Path%, 3, 选择 Lunar Client 1.17 的路径
 	if 117PathSelected =
 		return
 	else
@@ -391,5 +392,5 @@ Save(){
 	IniWrite, %117Path%, Config.ini, Paths, 1.17_Dir
 	IniWrite, %TextureLoad%, Config.ini, LC, Cosmetics
 	IniWrite, %JVMArgs%, Config.ini, LC, Arguments
-	MsgBox, 64, Settings Saved, Your Settings are now saved., 1
+	MsgBox, 64, Settings Saved, 设置已成功保存。, 1
 }
